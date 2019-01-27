@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { CarsComponent } from './components/cars/cars.component';
@@ -15,7 +16,9 @@ import { CarsComponent } from './components/cars/cars.component';
     BrowserModule,
     HttpClientModule,
     RouterModule,
+    MatDialogModule
   ],
+  entryComponents: [],
   providers: [],
   bootstrap: [AppComponent]
 })

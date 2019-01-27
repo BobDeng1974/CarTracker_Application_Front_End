@@ -24,15 +24,27 @@
           <h4>Electric Cars </h4>
           <ul>
             <li *ngFor="let car of electricCars">
-              {{car.plate}}
+              {{car.plate}}  {{car.make}}  {{car.odometerReading}}
             </li>
           </ul>
+          <div> 
+            <button type="button" class="btn btn-dark">Add an Electric Car</button>
+          </div>
         </div>
+        
         <div class="col-sm">
             <h4>Gas Cars </h4>
+            <div>
+              <button type="button" class="btn btn-dark">Add a Gas Car</button>
+            </div>
         </div>
+        
         <div class="col-sm">
             <h4>Diesel Cars </h4>
+            <div> 
+              <button type="button" class="btn btn-dark">Add a Diesel Car</button>
+            </div>
         </div>
+        
       </div>
     </div>

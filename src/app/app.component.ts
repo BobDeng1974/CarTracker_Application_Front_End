@@ -10,15 +10,13 @@ import { ElectricCar } from './models/ElectricCar';
 export class AppComponent {
   title = 'ProvisionUI';
 
-electricCars=[]
+electricCars=[];
 
 constructor(private electricCarService: ElectricCarService) {
 
   this.electricCarService.getAllElectricCars().then(data => {
     this.electricCars = data;
   });
-  console.log("-------------------")
-  console.log(JSON.stringify(this.electricCars[0]));
  }
 
 
