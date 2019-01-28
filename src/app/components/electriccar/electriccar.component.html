@@ -1,0 +1,36 @@
+
+<form #car="ngForm"  (ngSubmit)="registerNewElectricCar(car.value)" novalidate>
+  <div class="form-group">
+    <label for="exampleInputEmail1">plate</label>
+    <input class="form-control" type="text" name="plate" [(ngModel)]="car.plate" required>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">make</label>
+    <input class="form-control" type="text" [(ngModel)]="car.make" name="make" >
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">model</label>
+    <input class="form-control" type="text"  [(ngModel)]="car.model" name="model">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">year</label>
+    <input class="form-control" type="text" [(ngModel)]="car.year" name="year" >
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">odometerReading</label>
+    <input class="form-control" type="text"  [(ngModel)]="car.odometerReading" name="odometerReading">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">autonomy</label>
+    <input class="form-control" type="text" [(ngModel)]="car.autonomy" name="autonomy" >
+  </div>
+  <div class="text-left">
+    <button type="submit" class="btn btn-primary" id="submitButton" style="float: left">Submit</button>
+    <button type="submit" class="btn btn-primary" id="cancelButton" (click)="closeDialog()" style="float: right">Cancel</button>
+  </div>
+</form>
