@@ -26,6 +26,7 @@ registerNewElectricCar(car:ElectricCar){
     response =>{
       if(response.status==200){
 
+          this.closeDialog();
       }
     },
     error =>{
@@ -39,6 +40,7 @@ registerNewElectricCar(car:ElectricCar){
  */
 closeDialog(){
   this.dialogRef.close();
+  window.location.reload();
 }
 
 }
