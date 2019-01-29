@@ -1,50 +1,78 @@
+<html>
+<body>
+<!--My nav bar comes here -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">CarTracker</a>
 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <!-- Brand/logo -->
-    <a class="navbar-brand" href="#">CarTracker</a>
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Monitor Cars</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Delete a Car</a>
+    </li>
+  </ul>
+</nav>
 
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Monitor Cars</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Add Car</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Delete Car</a>
-      </li>
-    </ul>
-  </nav>
-  <hr class="col-xs-12">
+<mat-list>
 
-  <div class="container">
-      <div class="row">
-        <div class="col-sm" id="container-1">
-          <h4>Electric Cars </h4>
-          <ul>
-            <li *ngFor="let car of electricCars">
-              {{car.plate}}  {{car.make}}  {{car.odometerReading}}
-            </li>
-          </ul>
-          <div> 
-            <button type="button" class="btn btn-dark" (click)="addElectricCar()">Add an Electric Car</button>
-          </div>
-        </div>
-        
-        <div class="col-sm" id="container-2">
-            <h4>Gas Cars </h4>
-            <div>
-              <button type="button" class="btn btn-dark">Add a Gas Car</button>
-            </div>
-        </div>
-        
-        <div class="col-sm" id="container-3">
-            <h4>Diesel Cars </h4>
-            <div> 
-              <button type="button" class="btn btn-dark">Add a Diesel Car</button>
-            </div>
-        </div>
-        
-      </div>
+  <mat-divider></mat-divider>
+  <mat-list-item></mat-list-item>
+  <mat-divider></mat-divider>
+
+</mat-list>
+
+
+<mat-grid-list cols="1" rowHeight="5:1">
+
+  <mat-grid-tile id="container-1">
+    <hr class="col-xs-12">
+    <div class="col-sm">
+      <ul>
+        <h4>Electric Cars </h4>
+        <li *ngFor="let car of electricCars">
+          {{car.plate}} {{car.make}} {{car.odometerReading}}
+        </li>
+      </ul>
+      <button type="button" class="btn btn-light btn-sm" (click)="addElectricCar()" style="float: left">Add an Electric
+        Car
+      </button>
     </div>
+  </mat-grid-tile>
+
+
+  <mat-grid-tile id="container-2">
+    <hr class="col-xs-12">
+    <div class="col-sm">
+      <ul>
+        <h4>Gas Cars </h4>
+        <li *ngFor="let car of electricCars">
+          {{car.plate}} {{car.make}} {{car.odometerReading}}
+        </li>
+      </ul>
+      <button type="button" class="btn btn-light btn-sm" style="float: left">Add a Gas Car</button>
+    </div>
+
+  </mat-grid-tile>
+
+  <mat-grid-tile id="container-3">
+    <hr class="col-xs-12">
+    <div class="col-sm">
+
+      <ul>
+        <h4>Diesel Cars </h4>
+        <li *ngFor="let car of electricCars">
+          {{car.plate}} {{car.make}} {{car.odometerReading}}
+        </li>
+      </ul>
+      <button type="button" class="btn btn-light btn-sm" style="float: left">Add a Diesel Car</button>
+    </div>
+
+  </mat-grid-tile>
+
+</mat-grid-list>
+
+</body>
+</html>

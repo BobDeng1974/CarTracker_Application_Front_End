@@ -14,6 +14,7 @@ export class AppComponent {
 
 electricCars=[];
 
+
 constructor(private electricCarService: ElectricCarService, private dialog: MatDialog) {
 
   this.electricCarService.getAllElectricCars().then(data => {
