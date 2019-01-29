@@ -10,3 +10,8 @@ background-color:  #fdf7ad;
 overflow: auto;
 background-color: #dde67d;
 }
+
+#carouselExampleControls{
+background-color:  #fbf1aa;
+height: 400px
+}
