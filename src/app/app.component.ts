@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GasCarService } from './services/gas-car-service';
 import { ElectricCarService } from './services/electric-car-service';
 import { ElectricCar } from './models/ElectricCar';
 import { MatDialog, MatDialogConfig } from "@angular/material";
@@ -14,13 +15,18 @@ export class AppComponent {
   title = 'ProvisionUI';
 
 electricCars=[];
+gasCars=[];
 
 
-constructor(private electricCarService: ElectricCarService, private dialog: MatDialog) {
+constructor(private electricCarService: ElectricCarService,private gasCarService: GasCarService, private dialog: MatDialog) {
 
   this.electricCarService.getAllElectricCars().then(data => {
     this.electricCars = data;
   });
+
+   this.gasCarService.getAllGasCars().then(data => {
+   this.gasCars = data;
+});
  }
 
 /**

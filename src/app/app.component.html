@@ -43,8 +43,8 @@
       <div class="col-sm">
         <ul>
           <h4>Gas Cars </h4>
-          <li *ngFor="let car of electricCars">
-            {{car.plate}} {{car.make}} {{car.odometerReading}}
+          <li *ngFor="let gasCar of gasCars">
+            {{gasCar.plate}} {{gasCar.make}} {{gasCar.odometerReading}}
           </li>
         </ul>
         <button type="button" class="btn btn-light btn-sm" style="float: left" (click)="addGasCar()">Add a Gas Car</button>

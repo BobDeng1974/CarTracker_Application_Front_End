@@ -1,33 +1,39 @@
-<form>
+<form #gasCar="ngForm"  (ngSubmit)="registerNewGasCar(gasCar.value)">
 <div>
   <mat-form-field>
-    <input matInput placeholder="Enter your plate"  [formControl]="email" required>
+    <input matInput placeholder="Enter your vehicle plate"   [(ngModel)]="gasCar.plate" name="plate" required>
   </mat-form-field>
 </div>
 
 
 <div>
   <mat-form-field>
-    <input matInput placeholder="Enter your vahicle model"  [formControl]="email" required>
+    <input matInput placeholder="Enter your vehicle model"   [(ngModel)]="gasCar.make" name="make" required>
   </mat-form-field>
 </div>
 
 
 <div>
   <mat-form-field>
-    <input matInput placeholder="Enter your vahicle year"  [formControl]="email" required>
+    <input matInput placeholder="Enter your vehicle model"   [(ngModel)]="gasCar.model" name="model" required>
   </mat-form-field>
 </div>
 
 <div>
   <mat-form-field>
-    <input matInput placeholder="Enter your vahicle mileage"  [formControl]="email" required>
+    <input matInput placeholder="Enter your vehicle year"   [(ngModel)]="gasCar.year" name="year" required>
   </mat-form-field>
 </div>
 
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Enter your vehicle mileage"   [(ngModel)]="gasCar.odometerReading" name="odometerReading" required>
+    </mat-form-field>
+  </div>
+
 <div>
   <mat-form-field>
-    <input matInput placeholder="Enter number of gears in your vehicle"  [formControl]="email" required>
+    <input matInput placeholder="Enter number of gears in your vehicle"  [(ngModel)]="gasCar.gears" name="gears" required>
   </mat-form-field>
 </div>
 
