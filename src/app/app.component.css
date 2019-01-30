@@ -1,13 +1,13 @@
 #container-1{
-overflow: auto;
+overflow: visible;
 background-color:  #fbf1aa;
 }
 #container-2{
-overflow: auto;
+overflow: visible;
 background-color:  #fdf7ad;
 }
 #container-3{
-overflow: auto;
+overflow: visible;
 background-color: #dde67d;
 }
 

@@ -3,6 +3,7 @@ import { ElectricCarService } from './services/electric-car-service';
 import { ElectricCar } from './models/ElectricCar';
 import { MatDialog, MatDialogConfig } from "@angular/material";
 import { ElectriccarComponent } from './components/electriccar/electriccar.component';
+import { GascarComponent } from './components/gascar/gascar.component';
 
 @Component({
   selector: 'app-root',
@@ -34,4 +35,18 @@ constructor(private electricCarService: ElectricCarService, private dialog: MatD
   config.width = "400px";
   this.dialog.open(ElectriccarComponent,config);
  }
+
+
+ /**
+  * method to register a new ElectricCar
+  */
+  addGasCar(): void {
+   const config = new MatDialogConfig();
+   config.disableClose = false;
+   config.hasBackdrop = true;
+   config.autoFocus = true;
+   config.hasBackdrop = true;
+   config.width = "400px";
+   this.dialog.open(GascarComponent,config);
+  }
 }

@@ -9,11 +9,13 @@ import { ElectriccarComponent } from './components/electriccar/electriccar.compo
 import { FormsModule } from '@angular/forms';
 import {MatDividerModule} from '@angular/material/divider';
 import { MaterialModule } from './material.module';
+import { GascarComponent } from './components/gascar/gascar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ElectriccarComponent
+    ElectriccarComponent,
+    GascarComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,7 @@ import { MaterialModule } from './material.module';
     MatDividerModule,
     MaterialModule
   ],
-  entryComponents: [ElectriccarComponent],
+  entryComponents: [ElectriccarComponent,GascarComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
