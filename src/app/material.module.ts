@@ -15,7 +15,7 @@ MatCardModule
 import {MatGridListModule}from '@angular/material/grid-list';
 import {MatTabsModule}from '@angular/material/tabs';
 import {FormsModule, ReactiveFormsModule}from '@angular/forms';
-
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
 
@@ -31,7 +31,8 @@ MatGridListModule,
 MatTabsModule,
 FormsModule,
 ReactiveFormsModule,
-MatInputModule
+MatInputModule,
+MatTableModule
 ],
 exports: [
 MatButtonModule,
@@ -45,7 +46,8 @@ MatGridListModule,
 MatTabsModule,
 FormsModule,
 ReactiveFormsModule,
-MatInputModule
+MatInputModule,
+MatTableModule
 ]
 })
 export class MaterialModule {
