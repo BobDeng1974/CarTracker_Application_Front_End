@@ -4,16 +4,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { ElectriccarComponent } from './components/electriccar/electriccar.component';
+import { ElectriccarComponent } from './components/electriccarForm/electriccar.component';
 import { FormsModule } from '@angular/forms';
 import { MatDividerModule} from '@angular/material/divider';
 import { MaterialModule } from './material.module';
-import { GascarComponent } from './components/gascar/gascar.component';
+import { GascarComponent } from './components/gascarForm/gascar.component';
 import { RouterModule, Routes } from '@angular/router';
-import { TestComponent } from './components/test/test.component';
+import { ElectricCarListComponent } from './components/electric-car-list/electric-car-list.component';
 
+/**
+ * list of routes in the application
+ */
 const routes: Routes = [
-{ path: 'test', component: TestComponent }
+{ path: 'electriccarlist', component: ElectricCarListComponent}
 ];
 
 @NgModule({
@@ -21,7 +24,7 @@ const routes: Routes = [
     AppComponent,
     ElectriccarComponent,
     GascarComponent,
-    TestComponent
+    ElectricCarListComponent
   ],
   imports: [
     RouterModule.forRoot(

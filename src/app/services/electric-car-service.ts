@@ -6,9 +6,11 @@ import  {ElectricCar} from '../models/ElectricCar';
   providedIn: 'root'
 })
 export class ElectricCarService {
-root: string="http://localhost:9000";
+private root: string="http://localhost:9000";
   constructor(private http: HttpClient) { }
-
+/**
+ * main function to get list of all elelctric cars [[ElectriccarComponent]] form the backend server
+ */
 async getAllElectricCars(){
    let data = await this.http.get<ElectricCar[]>(this.root+"/electriccar").toPromise();
    return data;

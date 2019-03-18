@@ -3,8 +3,8 @@ import { GasCarService } from './services/gas-car-service';
 import { ElectricCarService } from './services/electric-car-service';
 import { ElectricCar } from './models/ElectricCar';
 import { MatDialog, MatDialogConfig } from "@angular/material";
-import { ElectriccarComponent } from './components/electriccar/electriccar.component';
-import { GascarComponent } from './components/gascar/gascar.component';
+import { ElectriccarComponent } from './components/electriccarForm/electriccar.component';
+import { GascarComponent } from './components/gascarForm/gascar.component';
 import {MatTableDataSource} from '@angular/material';
 
 

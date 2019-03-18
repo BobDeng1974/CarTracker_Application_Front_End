@@ -2,8 +2,6 @@
 
 <head>
 </head>
-
-
 <body>
 <!--My nav bar comes here -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -21,17 +19,23 @@
       <a class="nav-link" href="#">Delete a Car</a>
     </li>
 
+    <li class="nav-item">
+      <a class="nav-link" routerLink="electriccarlist">Electric Cars</a>
+    </li>
+
 
     <li class="nav-item">
       <a class="nav-link" routerLink="test">TEST</a>
     </li>
+
+    
 
 
 
   </ul>
 </nav>
 
-
+<router-outlet></router-outlet>
 <mat-tab-group>
   <mat-tab label="Electric Cars">
         <hr class="col-xs-12">
@@ -116,11 +120,7 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-
       <button type="button" class="btn btn-light btn-sm" style="float: left">Add a Diesel Car</button>
-
-    <router-outlet></router-outlet>
-
   </mat-tab>
 
 

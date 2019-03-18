@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
+*****      *      ***     ******   ***        *     *    *  ****  ***
+*        *   *    *   *     *      *   *    *   *   *  *    *     *   *
+*       ******    ***       *      ***     * ****   * *     ****  ***
+****** *       *  *   *     *      *   *  *       * *   *   ****  *  *
+Main repo for the Front End part of the CarTracker application aimed to help divers track down their maintenance and keep their vehicles up to date with the maintenance schedule.
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
