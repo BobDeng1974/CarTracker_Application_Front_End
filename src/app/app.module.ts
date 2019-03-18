@@ -6,24 +6,29 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ElectriccarComponent } from './components/electriccar/electriccar.component';
 import { FormsModule } from '@angular/forms';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule} from '@angular/material/divider';
 import { MaterialModule } from './material.module';
 import { GascarComponent } from './components/gascar/gascar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { TestComponent } from './components/test/test.component';
 
+const routes: Routes = [
+{ path: 'test', component: TestComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     ElectriccarComponent,
-    GascarComponent
+    GascarComponent,
+    TestComponent
   ],
   imports: [
     RouterModule.forRoot(
       [{ path: 'gascar', component: GascarComponent }]),
     BrowserModule,
     HttpClientModule,
-    RouterModule,
+    RouterModule.forRoot(routes),
     MatDialogModule,
     BrowserAnimationsModule,
     FormsModule,

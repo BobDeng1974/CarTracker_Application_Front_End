@@ -5,6 +5,10 @@ import { ElectricCar } from './models/ElectricCar';
 import { MatDialog, MatDialogConfig } from "@angular/material";
 import { ElectriccarComponent } from './components/electriccar/electriccar.component';
 import { GascarComponent } from './components/gascar/gascar.component';
+import {MatTableDataSource} from '@angular/material';
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -12,10 +16,20 @@ import { GascarComponent } from './components/gascar/gascar.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ProvisionUI';
 
-electricCars=[];
+displayedColumns: string[] = ['plate', 'make', 'model', 'year'];
+
+
+
+
+
+
+title = 'ProvisionUI';
+
+electricCars :ElectricCar[] = new Array() ;
 gasCars=[];
+
+
 
 
 constructor(private electricCarService: ElectricCarService,private gasCarService: GasCarService, private dialog: MatDialog) {
@@ -28,6 +42,10 @@ constructor(private electricCarService: ElectricCarService,private gasCarService
    this.gasCars = data;
 });
  }
+
+applyFilter(filterValue: any) {
+    this.electricCars.filter = filterValue.trim().toLowerCase();
+  }
 
 /**
  * method to register a new ElectricCar
@@ -55,4 +73,6 @@ constructor(private electricCarService: ElectricCarService,private gasCarService
    config.width = "400px";
    this.dialog.open(GascarComponent,config);
   }
+
+
 }

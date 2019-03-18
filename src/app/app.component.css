@@ -15,3 +15,12 @@ background-color: #dde67d;
 background-color:  #fbf1aa;
 height: 400px
 }
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
